@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+  <div id="app" class="text-center">
+    <img class="inline-block" alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <MyButton class="mt-8">Click Me!</MyButton>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import MyButton from './components/MyButton.vue';
 
 export default Vue.extend({
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    MyButton
   }
 });
 </script>
