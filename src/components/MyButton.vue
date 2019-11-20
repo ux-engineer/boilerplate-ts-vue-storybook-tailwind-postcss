@@ -24,3 +24,13 @@ export default createComponent({
   }
 });
 </script>
+
+<style lang="scss" scoped>
+button {
+  @apply bg-red-500 text-white;
+}
+
+button:hover {
+  @apply bg-red-700;
+}
+</style>
