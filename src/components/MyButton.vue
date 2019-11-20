@@ -7,27 +7,20 @@
   </button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { createComponent, SetupContext } from '@vue/composition-api';
+
+export default createComponent({
   name: 'my-button',
-
-  methods: {
-    onClick() {
+  setup: (props: any, context: SetupContext) => {
+    const onClick = () => {
       console.log('clicked!');
-      this.$emit('click');
-    }
-  }
-};
-</script>
+      context.emit('click');
+    };
 
-<style>
-button {
-  border: 1px solid #eee;
-  border-radius: 3px;
-  background-color: #ffffff;
-  cursor: pointer;
-  font-size: 15pt;
-  padding: 3px 10px;
-  margin: 10px;
-}
-</style>
+    return {
+      onClick
+    };
+  }
+});
+</script>

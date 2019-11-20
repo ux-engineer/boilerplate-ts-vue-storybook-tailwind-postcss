@@ -1,6 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { configure } from '@storybook/vue';
 
+// Import Vendor Plugins
+import '../../src/plugins';
+
 // Import Styles
 import '../../src/assets/styles/index.css';
 
